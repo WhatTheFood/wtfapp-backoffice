@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91289316-9aee-49d9-afca-980624300d81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/api.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/auth.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/login.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="$PROJECT_DIR$/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.jade" afterPath="$PROJECT_DIR$/app/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/auth.service.js" afterPath="$PROJECT_DIR$/app/scripts/services/auth.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.jade" afterPath="$PROJECT_DIR$/app/views/main.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_list.jade" afterPath="$PROJECT_DIR$/app/views/user_list.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/user_list.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/user_list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -47,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user_list.jade" pinned="false" current-in-tab="false">
+          <file leaf-file-name="user_list.jade" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/user_list.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.115766264">
+                  <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -61,7 +53,7 @@
             <entry file="file://$PROJECT_DIR$/app/scripts/services/auth.service.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="40" column="20" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="20" />
+                  <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -71,7 +63,7 @@
             <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                  <caret line="25" column="22" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -81,16 +73,16 @@
             <entry file="file://$PROJECT_DIR$/app/views/main.jade">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+                  <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.jade" pinned="false" current-in-tab="true">
+          <file leaf-file-name="login.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/login.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.08269019">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
                   <folding />
                 </state>
@@ -101,21 +93,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/login.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.24807057">
-                  <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user_list.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="user_list.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/user_list.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.1323043">
+                  <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -140,18 +132,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/grunt/express-server.coffee" />
-        <option value="$PROJECT_DIR$/app/views/user_list.jade" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/user_list.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/api.service.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/.jshintrc" />
         <option value="$PROJECT_DIR$/app/index.jade" />
-        <option value="$PROJECT_DIR$/app/views/main.jade" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/auth.service.js" />
         <option value="$PROJECT_DIR$/app/views/login.jade" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/login.js" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/auth.service.js" />
+        <option value="$PROJECT_DIR$/app/views/main.jade" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/user_list.js" />
+        <option value="$PROJECT_DIR$/app/views/user_list.jade" />
       </list>
     </option>
   </component>
@@ -385,6 +377,13 @@
       <option name="number" value="Default" />
       <updated>1443208335869</updated>
     </task>
+    <task id="LOCAL-00001" summary="Begin authentification">
+      <created>1443216955071</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1443216955071</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,6 +435,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Begin authentification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Begin authentification" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -445,14 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6260434">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_list.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -497,26 +492,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/user_list.js">
+    <entry file="file://$PROJECT_DIR$/app/views/login.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.jade">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -524,23 +511,39 @@
     <entry file="file://$PROJECT_DIR$/app/scripts/services/auth.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="20" />
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/login.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24807057">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/login.jade">
+    <entry file="file://$PROJECT_DIR$/app/views/main.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08269019">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/user_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1323043">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user_list.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.115766264">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>

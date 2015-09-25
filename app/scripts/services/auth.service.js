@@ -11,8 +11,9 @@ app.factory('AuthService', function AuthService($location,
                                          $cookieStore,
                                          $q) {
     var currentUser = {};
-    if($cookieStore.get('token')) {
-      //currentUser = User.get();
+    if ($cookieStore.get('token')) {
+      console.log('Cookie', $cookieStore.get('token'));
+      // TODO: get user
     }
 
     return {
@@ -39,7 +40,9 @@ app.factory('AuthService', function AuthService($location,
 
         return $http(req).
           success(function(data) {
-            $cookieStore.put('token', data.token);
+            if (data.user_token) {
+              $cookieStore.put('token', data.user_token);
+            }
             //currentUser = User.get(); TODO
             deferred.resolve(data);
             return cb();
