@@ -1,0 +1,27 @@
+//
+// Created by loic on 25/09/15.
+div(ng-include="'views/partials/header.html'")
+
+div#feedback
+  div.row
+    div.col-xs-8
+      h2 Feedbacks for {{ restaurant.title }}
+
+    div.col-xs-4.text-right
+      h2 {{ menu.date | date:'dd-MM-yyyy'}}
+
+  div(ng-repeat="meal in menu.meal")
+    h3 {{ meal.name }}
+
+    div(ng-repeat="category in meal.foodcategory")
+
+      h4 {{category.name}}
+
+      div(ng-repeat="dish in category.dishes")
+
+        div {{ dish.name }}
+          div(ng-repeat="feedback in dish.feedback")
+
+            div {{ feedback.thrown }}
+
+        hr

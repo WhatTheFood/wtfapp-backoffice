@@ -28,11 +28,23 @@ var app = angular
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl'
       })
+
       .state('restaurant-list', {
         url: '/restaurants',
         templateUrl: 'views/restaurants.html',
         controller: 'RestaurantsCtrl'
       })
+      .state('restaurant', {
+        url: '/restaurants/:restaurantId',
+        templateUrl: 'views/restaurant.html',
+        controller: 'RestaurantCtrl'
+      })
+      .state('restaurant_feedbacks', {
+        url: '/restaurants/:restaurantId/:date',
+        templateUrl: 'views/feedbacks_for_date.html',
+        controller: 'FeedbacksForDateCtrl'
+      })
+
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.html',

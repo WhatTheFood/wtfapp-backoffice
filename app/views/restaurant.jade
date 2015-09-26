@@ -1,0 +1,24 @@
+//
+// Created by loic on 25/09/15.
+div(ng-include="'views/partials/header.html'")
+
+div#feedback
+  h1 Restaurant {{ restaurant.title }}
+  .form-group
+    .input-group
+      .input-group-addon
+        i.fa.fa-search
+      input.form-control(type='text', placeholder='Search', ng-model='search')
+
+  table.table
+    thead
+      tr
+        th
+          a(ng-click="orderBy = 'date'; sortReverse = !sortReverse") Date
+            span &nbsp;
+            span.fa.fa-caret-down(ng-show="orderBy == 'date' && !sortReverse")
+            span.fa.fa-caret-up(ng-show="orderBy == 'date' && sortReverse")
+    tbody
+      tr(ng-repeat="menu in restaurant.menus | orderBy:orderBy:sortReverse | filter:search")
+        td
+          a(ng-click="goToFeedbacksForDate(restaurant, menu)") {{ menu.date| date:'dd-MM-yyyy' }}

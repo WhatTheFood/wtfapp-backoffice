@@ -28,3 +28,4 @@ div#restaurants-list
         td {{ restaurant.title }}
         td
           button.btn.btn-primary(ng-click="activate(restaurant)") Activer
+          button.btn.btn-primary(ui-sref="restaurant({ restaurantId: restaurant.id, date: menu.date})") Feedbacks
