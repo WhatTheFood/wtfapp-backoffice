@@ -20,8 +20,8 @@ div#feedback
       div(ng-repeat="dish in category.dishes")
 
         div {{ dish.name }}
-          div(ng-repeat="feedback in dish.feedback")
+        br
 
-            div {{ feedback.thrown }}
+        div(ng-bind-html="printThrownInfos(dish)")
 
         hr

@@ -13,6 +13,7 @@ app.controller('RestaurantsCtrl', function ($scope,
     $scope.restaurants = response.data;
     ModalLoading.hide();
   }, function(response) {
+    // TODO: handle error response
     console.log('KO', response);
     ModalLoading.hide();
   });
@@ -24,6 +25,7 @@ app.controller('RestaurantsCtrl', function ($scope,
       console.log('OK', response);
       ModalLoading.hide();
     }, function(response) {
+      // TODO: handle error response
       console.log('KO', response);
       ModalLoading.hide();
     });
@@ -35,6 +37,7 @@ app.controller('RestaurantsCtrl', function ($scope,
       console.log('OK', response);
       ModalLoading.hide();
     }, function(response) {
+      // TODO: handle error response
       console.log('KO', response);
       ModalLoading.hide();
     });

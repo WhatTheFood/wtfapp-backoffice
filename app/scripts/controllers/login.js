@@ -18,6 +18,8 @@ app.controller('LoginCtrl', function ($scope,
       $location.path('/');
     },
     function(response) {
+      // TODO: handle error response
+      $scope.error = "Invalid credentials";
       console.log('KO ', response);
     })
   };

@@ -58,13 +58,13 @@ var app = angular
     $httpProvider.interceptors.push('authInterceptor');
   })
 
-  .run(function ($rootScope, $location, AuthService) {
+  .run(function ($rootScope, $state, AuthService) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
 
       AuthService.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
-          $location.path('/login');
+          $state.go("login");
         }
       });
 
@@ -72,7 +72,7 @@ var app = angular
   });
 
   // -- factories
-app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
+app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location, Constants) {
 
   return {
     // Add authorization token to headers
@@ -86,7 +86,9 @@ app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location
 
     // Intercept 401s and redirect you to login
     responseError: function(response) {
-      if (response.status === 401) {
+      console.log(response);
+      if (response.status === 401
+        && response.config.url != Constants.API_URL + "/users/login") {
         $location.path('/#/login');
         // remove any stale tokens
         $cookieStore.remove('token');
