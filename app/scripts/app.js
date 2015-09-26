@@ -6,11 +6,14 @@ var app = angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap',
+    'cfp.hotkeys'
   ])
 
   .constant('Constants', {
-    'API_URL': 'http://whatthefood.herokuapp.com/api',
+    'API_URL': 'http://localhost:9000/api',
+    //'API_URL': 'http://whatthefood.herokuapp.com/api',
     'VERSION': '0.1'
   })
 

@@ -27,5 +27,6 @@ div#restaurants-list
       tr(ng-repeat="restaurant in restaurants | orderBy:orderBy:sortReverse | filter:search")
         td {{ restaurant.title }}
         td
-          button.btn.btn-primary(ng-click="activate(restaurant)") Activer
+          div.btn.btn-primary.btn-success(ng-if="!restaurant.is_enable", ng-really-click="enable(restaurant)", ng-really-message="Enable {{ restaurant.title }} ?") Enable
+          div.btn.btn-primary.btn-danger(ng-if="restaurant.is_enable", ng-really-click="disable(restaurant)", ng-really-message="Disable {{ restaurant.title }} ?") Disable
           button.btn.btn-primary(ui-sref="restaurant({ restaurantId: restaurant.id, date: menu.date})") Feedbacks
