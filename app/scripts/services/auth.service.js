@@ -9,11 +9,16 @@ app.factory('AuthService', function AuthService($location,
                                          $http,
                                          Constants,
                                          $cookieStore,
+                                         ApiService,
                                          $q) {
+
     var currentUser = {};
+
     if ($cookieStore.get('token')) {
       console.log('Cookie', $cookieStore.get('token'));
-      // TODO: get user
+      ApiService.getMe().then(function(user) {
+        currentUser = user;
+      })
     }
 
     return {
@@ -43,7 +48,11 @@ app.factory('AuthService', function AuthService($location,
             if (data.user_token) {
               $cookieStore.put('token', data.user_token);
             }
-            //currentUser = User.get(); TODO
+
+            ApiService.getMe().then(function(user) {
+              currentUser = user;
+            });
+
             deferred.resolve(data);
             return cb();
           }).
@@ -122,7 +131,10 @@ app.factory('AuthService', function AuthService($location,
        * @return {Boolean}
        */
       isLoggedIn: function() {
-        return currentUser.hasOwnProperty('role');
+        if ($cookieStore.get('token')) {
+          return true;
+        }
+        return false;
       },
 
       /**

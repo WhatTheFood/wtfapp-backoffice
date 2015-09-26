@@ -1,8 +1,9 @@
 'use strict';
 
 app.controller('LoginCtrl', function ($scope,
+                                      $location,
                                       AuthService,
-                                       ApiService) {
+                                      ApiService) {
 
 
   $scope.user = {
@@ -14,6 +15,7 @@ app.controller('LoginCtrl', function ($scope,
 
     AuthService.login(user, null).then(function(response) {
       console.log('OK ', response.data);
+      $location.path('/');
     },
     function(response) {
       console.log('KO ', response);

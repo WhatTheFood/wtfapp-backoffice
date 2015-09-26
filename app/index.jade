@@ -37,8 +37,9 @@ body(ng-app="wtfApp")
   <![endif]-->
 
   // Add your site or application content here
-
   div.container(ui-view)
+
+  div(ng-include="'views/partials/loading.html'")
 
 
   // Google Analytics: change UA-XXXXX-X to be your site's ID
@@ -74,9 +75,13 @@ body(ng-app="wtfApp")
   // build:js(.tmp) scripts/main.js
   script(src="scripts/app.js")
 
+  script(src="scripts/loading.js")
+
   script(src="scripts/controllers/main.js")
   script(src="scripts/controllers/user_list.js")
   script(src="scripts/controllers/login.js")
+
+  script(src="scripts/controllers/partials/header.js")
 
   script(src="scripts/services/api.service.js")
   script(src="scripts/services/auth.service.js")

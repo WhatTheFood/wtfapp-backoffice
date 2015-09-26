@@ -1,0 +1,11 @@
+div.header(ng-controller="headerCtrl")
+  ul.nav.nav-pills.pull-right
+    li
+      a(ng-href="#") Home
+    li(ng-if="isConnected")
+      a(ui-sref="user-list") Users
+    li(ng-if="!isConnected")
+      a(ui-sref="login") Login
+    li(ng-if="isConnected")
+      a(ng-click="logout()") Logout
+  h3.text-muted wtf

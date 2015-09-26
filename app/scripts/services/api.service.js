@@ -7,7 +7,7 @@ app.factory('ApiService', function ($http,
 
   return {
 
-    getUsers: function() {
+    getUsers : function() {
       var deferred = $q.defer();
 
       return $http.get(Constants.API_URL + '/users/')
@@ -18,6 +18,19 @@ app.factory('ApiService', function ($http,
           deferred.reject(response);
         });
 
+    },
+
+    getMe : function() {
+      var deferred = $q.defer();
+
+      return $http.get(Constants.API_URL + '/users/me')
+        .success(function (response) {
+          console.log('USER', response);
+          deferred.resolve(response);
+        })
+        .error(function (response) {
+          deferred.reject(response);
+        });
     }
 
   }

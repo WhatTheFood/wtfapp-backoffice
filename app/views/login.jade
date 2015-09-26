@@ -1,9 +1,16 @@
 //
    Created by loic on 25/09/15.
 
+div(ng-include="'views/partials/header.html'")
 
-div
-  input#login(ng-model="user.email")
-  input#password(ng-model="user.password")
-
-  button.btn.btn-large(ng-click="submit(user)") Valider
+div.row.text-center
+  div.col-xs-12
+    input#login.form-control(ng-model="user.email")
+    br
+    br
+  div.col-xs-12
+    input#password.form-control(ng-model="user.password")
+    br
+    br
+  div.col-xs-12
+    button.btn.btn-large.btn-primary(ng-click="submit(user)") Valider
