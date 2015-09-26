@@ -4,6 +4,10 @@
 app.controller('UsersCtrl', function ($scope,
                                          ApiService) {
 
+  $scope.orderBy = 'email';      // set the default sort type
+  $scope.sortReverse = false;   // set the default sort order
+  $scope.search   = '';     // set the default search/filter term
+
   ModalLoading.show();
     ApiService.getUsers().then(
       function (response) {

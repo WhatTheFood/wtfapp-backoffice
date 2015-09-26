@@ -6,15 +6,33 @@ div(ng-include="'views/partials/header.html'")
 div#users-list
   h1 User List
 
+  .form-group
+    .input-group
+      .input-group-addon
+        i.fa.fa-search
+      input.form-control(type='text', placeholder='Search', ng-model='search')
+
   table.table
     thead
       tr
-        th email
-        th first name
-        th last name
+        th
+          a(ng-click="orderBy = 'email'; sortReverse = !sortReverse") email
+            span &nbsp;
+            span.fa.fa-caret-down(ng-show="orderBy == 'email' && !sortReverse")
+            span.fa.fa-caret-up(ng-show="orderBy == 'email' && sortReverse")
+        th
+          a(ng-click="orderBy = 'first_name'; sortReverse = !sortReverse") first name
+            span &nbsp;
+            span.fa.fa-caret-down(ng-show="orderBy == 'first_name' && !sortReverse")
+            span.fa.fa-caret-up(ng-show="orderBy == 'first_name' && sortReverse")
+        th
+          a(ng-click="orderBy = 'last_name'; sortReverse = !sortReverse") last name
+            span &nbsp;
+            span.fa.fa-caret-down(ng-show="orderBy == 'last_name' && !sortReverse")
+            span.fa.fa-caret-up(ng-show="orderBy == 'last_name' && sortReverse")
 
     tbody
-      tr(ng-repeat="user in users | orderBy:sortType")
+      tr(ng-repeat="user in users| orderBy:orderBy:sortReverse | filter:search")
         td {{ user.email }}
         td {{ user.first_name }}
         td {{ user.last_name }}
