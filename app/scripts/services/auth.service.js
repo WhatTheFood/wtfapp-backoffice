@@ -34,19 +34,13 @@ app.factory('AuthService', function AuthService($location,
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
-        console.log(user);
-        var req = {
-          method: 'GET',
-          url: Constants.API_URL + '/users/login',
-          headers: {
-            Authorization: "Basic " + utf8_to_b64(user.email + ":" + user.password)
-          }
-        };
-
-        return $http(req).
+        return $http.post(Constants.API_URL + '/auth/local', {
+          email: user.email,
+          password: user.password
+        }).
           success(function(data) {
-            if (data.user_token) {
-              $cookieStore.put('token', data.user_token);
+            if (data.token) {
+              $cookieStore.put('token', data.token);
             }
 
             ApiService.getMe().then(function(user) {

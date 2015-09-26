@@ -7,8 +7,8 @@ app.controller('LoginCtrl', function ($scope,
 
 
   $scope.user = {
-    'email': 'test@laposte.net',
-    'password': 'test'
+    'email': 'test@test.fr',
+    'password': 'toto42'
   };
 
   $scope.submit = function(user) {
@@ -18,6 +18,8 @@ app.controller('LoginCtrl', function ($scope,
       $location.path('/');
     },
     function(response) {
+      // TODO: handle error response
+      $scope.error = "Invalid credentials";
       console.log('KO ', response);
     })
   };

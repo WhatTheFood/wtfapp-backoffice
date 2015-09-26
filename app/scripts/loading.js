@@ -2,7 +2,7 @@
  * Created by loic on 26/09/15.
  */
 
-app.directive('Loading', function() {
+app.directive('loading', function() {
 
   return {
     restrict: 'E',

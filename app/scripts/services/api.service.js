@@ -2,9 +2,6 @@ app.factory('ApiService', function ($http,
                                     $q,
                                     Constants) {
 
-  // test@laposte.net
-  // test
-
   return {
 
     getUsers : function() {
@@ -38,7 +35,7 @@ app.factory('ApiService', function ($http,
     getRestaurants : function() {
       var deferred = $q.defer();
 
-      return $http.get(Constants.API_URL + '/restaurants')
+      return $http.get(Constants.API_URL + '/restaurants/admin/')
         .success(function (response) {
           deferred.resolve(response);
         })
@@ -47,10 +44,10 @@ app.factory('ApiService', function ($http,
         });
     },
 
-    postActivateRestaurants : function(restaurant) {
+    getRestaurant : function(id) {
       var deferred = $q.defer();
 
-      return $http.post(Constants.API_URL + '/restaurants/' + restaurant.id + '/activate')
+      return $http.get(Constants.API_URL + '/restaurants/' + id)
         .success(function (response) {
           deferred.resolve(response);
         })
@@ -59,10 +56,22 @@ app.factory('ApiService', function ($http,
         });
     },
 
-    postDesactivateRestaurants : function(restaurant) {
+    postEnableRestaurant : function(restaurant) {
       var deferred = $q.defer();
 
-      return $http.get(Constants.API_URL + '/restaurants/' + restaurant.id + '/deactivate')
+      return $http.post(Constants.API_URL + '/restaurants/admin/enable', { 'restaurantId': restaurant.id})
+        .success(function (response) {
+          deferred.resolve(response);
+        })
+        .error(function (response) {
+          deferred.reject(response);
+        });
+    },
+
+    postDisableRestaurant : function(restaurant) {
+      var deferred = $q.defer();
+
+      return $http.post(Constants.API_URL + '/restaurants/admin/disable', { 'restaurantId': restaurant.id })
         .success(function (response) {
           deferred.resolve(response);
         })

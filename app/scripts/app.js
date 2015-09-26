@@ -6,11 +6,14 @@ var app = angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap',
+    'cfp.hotkeys'
   ])
 
   .constant('Constants', {
-    'API_URL': 'http://whatthefood.herokuapp.com/api',
+    'API_URL': 'http://localhost:9000/api',
+    //'API_URL': 'http://whatthefood.herokuapp.com/api',
     'VERSION': '0.1'
   })
 
@@ -28,11 +31,23 @@ var app = angular
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl'
       })
+
       .state('restaurant-list', {
         url: '/restaurants',
         templateUrl: 'views/restaurants.html',
         controller: 'RestaurantsCtrl'
       })
+      .state('restaurant', {
+        url: '/restaurants/:restaurantId',
+        templateUrl: 'views/restaurant.html',
+        controller: 'RestaurantCtrl'
+      })
+      .state('restaurant_feedbacks', {
+        url: '/restaurants/:restaurantId/:date',
+        templateUrl: 'views/feedbacks_for_date.html',
+        controller: 'FeedbacksForDateCtrl'
+      })
+
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.html',
@@ -46,13 +61,13 @@ var app = angular
     $httpProvider.interceptors.push('authInterceptor');
   })
 
-  .run(function ($rootScope, $location, AuthService) {
+  .run(function ($rootScope, $state, AuthService) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
 
       AuthService.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
-          $location.path('/login');
+          $state.go("login");
         }
       });
 
@@ -60,7 +75,7 @@ var app = angular
   });
 
   // -- factories
-app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
+app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location, Constants) {
 
   return {
     // Add authorization token to headers
@@ -74,7 +89,9 @@ app.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location
 
     // Intercept 401s and redirect you to login
     responseError: function(response) {
-      if (response.status === 401) {
+      console.log(response);
+      if (response.status === 401
+        && response.config.url != Constants.API_URL + "/users/login") {
         $location.path('/#/login');
         // remove any stale tokens
         $cookieStore.remove('token');

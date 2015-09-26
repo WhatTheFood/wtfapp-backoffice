@@ -16,6 +16,7 @@ app.controller('UsersCtrl', function ($scope,
         ModalLoading.hide();
       },
       function (response) {
+        // TODO: handle error response
         console.log('KO', response);
         ModalLoading.hide();
       }

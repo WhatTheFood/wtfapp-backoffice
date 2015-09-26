@@ -13,28 +13,33 @@ app.controller('RestaurantsCtrl', function ($scope,
     $scope.restaurants = response.data;
     ModalLoading.hide();
   }, function(response) {
+    // TODO: handle error response
     console.log('KO', response);
     ModalLoading.hide();
   });
 
 
-  $scope.activate = function(restaurant) {
+  $scope.enable = function(restaurant) {
     ModalLoading.show();
-    ApiService.postActivateRestaurants(restaurant).then(function(response) {
+    ApiService.postEnableRestaurant(restaurant).then(function(response) {
       console.log('OK', response);
+      restaurant.is_enable = true;
       ModalLoading.hide();
     }, function(response) {
+      // TODO: handle error response
       console.log('KO', response);
       ModalLoading.hide();
     });
   };
 
-  $scope.deactivate = function(restaurant) {
+  $scope.disable = function(restaurant) {
     ModalLoading.show();
-    ApiService.postDesactivateRestaurants(restaurant).then(function(response) {
+    ApiService.postDisableRestaurant(restaurant).then(function(response) {
       console.log('OK', response);
+      restaurant.is_enable = false;
       ModalLoading.hide();
     }, function(response) {
+      // TODO: handle error response
       console.log('KO', response);
       ModalLoading.hide();
     });

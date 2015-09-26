@@ -12,5 +12,8 @@ div.row.text-center
     input#password.form-control(ng-model="user.password")
     br
     br
+
+  div.col-xs-12.error-block(ng-if="error") {{error}}
+
   div.col-xs-12
     button.btn.btn-large.btn-primary(ng-click="submit(user)") Valider
