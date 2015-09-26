@@ -1,7 +1,7 @@
 'use strict';
 
 
-app.controller('UserListCtrl', function ($scope,
+app.controller('UsersCtrl', function ($scope,
                                          ApiService) {
 
   ModalLoading.show();

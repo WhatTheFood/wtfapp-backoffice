@@ -1,0 +1,20 @@
+//
+   Created by loic on 25/09/15.
+
+div(ng-include="'views/partials/header.html'")
+
+div#users-list
+  h1 User List
+
+  table.table
+    thead
+      tr
+        th email
+        th first name
+        th last name
+
+    tbody
+      tr(ng-repeat="user in users | orderBy:sortType")
+        td {{ user.email }}
+        td {{ user.first_name }}
+        td {{ user.last_name }}

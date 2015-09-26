@@ -25,8 +25,13 @@ var app = angular
       })
       .state('user-list', {
         url: '/users',
-        templateUrl: 'views/user_list.html',
-        controller: 'UserListCtrl'
+        templateUrl: 'views/users.html',
+        controller: 'UsersCtrl'
+      })
+      .state('restaurant-list', {
+        url: '/restaurants',
+        templateUrl: 'views/restaurants.html',
+        controller: 'RestaurantsCtrl'
       })
       .state('login', {
         url: '/login',
