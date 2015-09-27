@@ -4,7 +4,7 @@
   "dependencies": {
     "express": "^4.13.3",
     "grunt-cli": "0.1.13",
-    "gzippo": "^0.2.0"
+    "gzippo": "^0.2.0",
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~1.0.0",
