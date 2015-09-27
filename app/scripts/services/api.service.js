@@ -30,6 +30,19 @@ app.factory('ApiService', function ($http,
         });
     },
 
+    postRole : function(user, role) {
+
+      var deferred = $q.defer();
+
+      return $http.post(Constants.API_URL + '/users/' + user._id + '/role', { 'role': role })
+        .success(function (response) {
+          deferred.resolve(response);
+        })
+        .error(function (response) {
+          deferred.reject(response);
+        });
+    },
+
     // -- Restaurants
 
     getRestaurants : function() {

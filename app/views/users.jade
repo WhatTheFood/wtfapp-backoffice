@@ -30,9 +30,17 @@ div#users-list
             span &nbsp;
             span.fa.fa-caret-down(ng-show="orderBy == 'last_name' && !sortReverse")
             span.fa.fa-caret-up(ng-show="orderBy == 'last_name' && sortReverse")
+        th Current role
+        th change role
 
     tbody
       tr(ng-repeat="user in users| orderBy:orderBy:sortReverse | filter:search")
         td {{ user.email }}
         td {{ user.first_name }}
         td {{ user.last_name }}
+        td
+          b {{ user.role }}
+        td
+          a(ng-if="user.role != 'user'", ng-really-click="changeRole(user, 'user')" ng-really-message="Do you want to set the role 'user' to this user ?") user &nbsp;
+          a(ng-if="user.role != 'crous'", ng-really-click="changeRole(user, 'crous')" ng-really-message="Do you want to set the role 'crous' to this user ?") crous &nbsp;
+          a(ng-if="user.role != 'admin'", ng-really-click="changeRole(user, 'admin')" ng-really-message="Do you want to set the role 'admin' to this user ?") admin &nbsp;
